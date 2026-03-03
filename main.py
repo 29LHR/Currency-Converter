@@ -52,7 +52,7 @@ def convert():
         messagebox.showerror("Conversion Error", "Invalid exchange rate.")
         return
 
-    result_var.set(f"{amount:,.4f} {from_currency} = {converted:,.4f} {to_currency}")
+    result_var.set(f"{amount:,.2f} {from_currency} = {converted:,.2f} {to_currency}")
 
 
 root = tk.Tk()
