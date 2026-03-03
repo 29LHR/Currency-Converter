@@ -1,29 +1,10 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
+import json
 
 # Exchange rates relative to USD (approximate rates as of 2024-01-01)
-RATES = {
-    "USD": 1.0,
-    "EUR": 0.92,
-    "GBP": 0.79,
-    "JPY": 149.50,
-    "CAD": 1.36,
-    "AUD": 1.53,
-    "CHF": 0.90,
-    "CNY": 7.24,
-    "INR": 83.12,
-    "MXN": 17.15,
-    "BRL": 4.97,
-    "KRW": 1325.0,
-    "SGD": 1.34,
-    "HKD": 7.82,
-    "NOK": 10.55,
-    "SEK": 10.42,
-    "DKK": 6.89,
-    "NZD": 1.63,
-    "ZAR": 18.63,
-    "RUB": 89.50,
-}
+with open("rates.json", "r") as file:
+    RATES = json.load(file)
 
 CURRENCIES = sorted(RATES.keys())
 
